@@ -50,6 +50,6 @@ end
 
 end
 
-a=Account.new(200)
+a=Account.new(100)
 puts a.user_input
 	
