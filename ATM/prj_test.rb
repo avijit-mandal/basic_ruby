@@ -1,6 +1,7 @@
 
 require '/home/avijit/projects/ruby_programs/ATM/deposit.rb'
 require '/home/avijit/projects/ruby_programs/ATM/withdraw.rb'
+require '/home/avijit/projects/ruby_programs/ATM/account_no.rb'
 
 class Account
 	@@balance=0
@@ -26,7 +27,7 @@ def test(entry)
 	
 	elsif entry == 'Q'  || entry=="q"
 		puts "\tThank you for using our service"
-#		
+		
 	else
 		puts "\tEnter a correct key D, W, B or Q"
 	end
@@ -59,6 +60,6 @@ end
 
 end
 
-a=Account.new(100)
+a=Account.new(account_no)
 puts a.text_ex
 	
