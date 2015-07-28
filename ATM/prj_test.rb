@@ -33,7 +33,7 @@ def test(entry)
 end
 
 def user_input
-	print "\t D)deposit W)ithdraw B)alance Q)uite :  "
+	print "\tD)deposit W)ithdraw B)alance Q)uite :  "
 	
 	choice = gets
 	entry = choice.strip

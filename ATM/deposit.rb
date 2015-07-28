@@ -14,7 +14,7 @@ def deposit
 	
 	end
 	puts "\tSuccessfuly Deposit amount #{amount}"
-	puts "\t your new balance is Rs.#{total}"
+	puts "\tYour new balance is Rs.#{total}"
 	else
 		puts "\tNot a valid amount to deposit enter amount \n\tamount should be more than 0 (zero)"
 		deposit
