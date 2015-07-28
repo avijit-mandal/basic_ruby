@@ -15,7 +15,7 @@ def withdraw
 	end
 	
 	puts "\tSuccessfuly withdraw amount #{amount}"
-	puts "\tYour new balance is Rs.#{total}"
+	puts "\Your new balance is Rs.#{total}"
 	else
 		puts "\tamount should be more than 0 and less than #{balance}"
 		withdraw
