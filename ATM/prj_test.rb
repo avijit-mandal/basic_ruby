@@ -1,7 +1,7 @@
 
-require '/home/avijit/projects/basic_ruby/ATM/deposit.rb'
-require '/home/avijit/projects/basic_ruby/ATM/withdraw.rb'
-require '/home/avijit/projects/basic_ruby/ATM/account_no.rb'
+require './deposit.rb'
+require './withdraw.rb'
+require './account_no.rb'
 
 class Account
 	@@balance=0
