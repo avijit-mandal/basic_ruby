@@ -60,6 +60,5 @@ end
 
 end
 
-a=Account.new(account_no)
-puts a.text_ex
+
 	
