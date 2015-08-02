@@ -27,6 +27,10 @@ class FileManager
     File.read(filepath(filename))
   end
   
+  def self.write(filename, amount)
+    File.write(filepath(filename), amount)
+  end
+  
   private
   
   def self.filepath(filename)

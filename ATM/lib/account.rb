@@ -12,16 +12,15 @@ class Account
 		balance = FileManager.read(balance_file_name)
 		
 		print "\tEnter the amount you want to deposite:  "
-		money= gets
-		amount=money.to_i
-		if amount >0
-			total = amount+balance.to_i
 		
-			File.open("../temp/#{balance_file_name}", "w") do |aFile|
-				aFile.puts "#{total}"
-			end
+		amount=gets.to_i
+		if amount >0
+			total = amount+FileManager.read(balance_file_name).to_i
+		
+			FileManager.write(balance_file_name, total)
+			
 			puts "\tSuccessfuly Deposit amount #{amount}"
-			puts "\tYour new balance is Rs.#{total}"
+			puts "\tYour new balance is Rs.#{FileManager.read(balance_file_name)}"
 		else
 			puts "\tNot a valid amount to deposit enter amount \n\tamount should be more than 0 (zero)"
 			deposit
@@ -35,20 +34,18 @@ class Account
 		balance = FileManager.read(balance_file_name)
 		
 		print "\tEnter the amount you want to withdraw:  "
-		money= gets
-		amount=money.to_i
-		if amount <= balance.to_i && amount > 0
-			
-		total= balance.to_i - amount
 		
-		File.open("../temp/#{balance_file_name}", "w") do |aFile|
-		aFile.puts "#{total}"
-		end
+		amount=gets.to_i
+		if amount <= FileManager.read(balance_file_name).to_i && amount > 0
+			
+		total= FileManager.read(balance_file_name).to_i - amount
+		
+		FileManager.write(balance_file_name, total)
 		
 		puts "\tSuccessfuly withdraw amount #{amount}"
-		puts "\tYour new balance is Rs.#{total}"
+		puts "\tYour new balance is Rs.#{FileManager.read(balance_file_name)}"
 		else
-			puts "\tamount should be more than 0 and less than #{balance}"
+			puts "\tamount should be more than 0 and less than #{FileManager.read(balance_file_name)}"
 			withdraw
 		end
 		
@@ -56,8 +53,7 @@ class Account
 	end
 
 	def balance
-		balance = FileManager.read(balance_file_name)
-		puts "\tYour account balance is Rs.#{balance}"
+		puts "\tYour account balance is Rs.#{FileManager.read(balance_file_name)}"
 	end
 	
 	private
