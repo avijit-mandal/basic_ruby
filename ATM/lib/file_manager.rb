@@ -1,12 +1,18 @@
+require 'pathname'
+
 class FileManager
   attr_reader :account
+  
+  Bin_file = Pathname.new(__FILE__).realpath
+  PATH = File.expand_path('../../', Bin_file)
+  puts PATH
 
   BASE_FOLDER = "temp"
   
   def self.create_dir
     
-    unless Dir.exists?("../#{BASE_FOLDER}")  
-      Dir.mkdir("../#{BASE_FOLDER}")
+    unless Dir.exists?("#{PATH}/temp")  
+      Dir.mkdir("#{PATH}/temp")
     end
     
   end
@@ -30,11 +36,11 @@ class FileManager
   def self.write(filename, amount)
     File.write(filepath(filename), amount)
   end
-  
+
   private
   
   def self.filepath(filename)
-    "../#{BASE_FOLDER}/#{filename}"
+    "#{PATH}/temp/#{filename}"
   end
   
 end

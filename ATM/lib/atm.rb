@@ -1,6 +1,5 @@
-require './account'
-require './file_manager'
-
+require 'account'
+require 'file_manager'
 
 class Atm
 	
@@ -64,10 +63,3 @@ class Atm
 	  "balance_#{account.account_no}"
 	end
 end
-
-Atm.start
-
-#~ file = FileManager.new
-#~ file.create_dir
-#~ file.create_file(acc_no)
-#~ file.read_data

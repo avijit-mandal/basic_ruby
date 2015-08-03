@@ -1,4 +1,4 @@
-require './file_manager'
+require 'file_manager'
 
 class Account
 	attr_accessor :account_no
