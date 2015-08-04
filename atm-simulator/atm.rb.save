@@ -1,6 +1,0 @@
-require (./Menu)
-class Atm
- def start
-   Menu.new
- end
-end
