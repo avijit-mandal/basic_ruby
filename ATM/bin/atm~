@@ -6,7 +6,7 @@ bin_file = Pathname.new(__FILE__).realpath
 
 $LOAD_PATH << File.expand_path('../../lib', bin_file)
 
-require 'transaction'
+require 'Transaction'
 
 Atm::Transaction.start
 
