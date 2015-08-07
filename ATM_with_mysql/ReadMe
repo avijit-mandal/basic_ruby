@@ -1,0 +1,9 @@
+If mysql gen is not installed then install mysql gem usung:
+gem install mysql2
+
+
+then create a database named "atm"
+then create a table "accounts" with two coloumn named "account_no" and "balance"
+
+
+then run ./bin/atm
